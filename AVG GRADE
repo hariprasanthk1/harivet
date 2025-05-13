@@ -13,9 +13,9 @@ int main() {
     
     if (avg>90 && avg<=100) {
         printf("grade = 'A'");
-    } else if (avg>70 && avg<=100) {
+    } else if (avg>70 && avg<=90) {
         printf("grade = 'B'");
-    } else if (avg>35 && avg<=100) {
+    } else if (avg>35 && avg<=70) {
          printf("grade = 'C'");
     }else {
         printf("FAIL");
