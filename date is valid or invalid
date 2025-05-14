@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+// Function to check if a year is a leap year
+int isLeapYear(int year) {
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+}
+
+int main() {
+    int dd, mm, yy;
+    scanf("%d/%d/%d", &dd, &mm, &yy);
+
+    if (yy < 1900 || yy > 9999) {
+        printf("Invalid\n");
+        return 0;
+    }
+
+    if (mm < 1 || mm > 12) {
+        printf("Invalid\n");
+        return 0;
+    }
+    
+    int maxDays[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+    if (mm == 2 && isLeapYear(yy)) {
+        maxDays[2] = 29;
+    }
+
+
+    if (dd < 1 || dd > maxDays[mm]) {
+        printf("Invalid\n");
+    } else {
+        printf("Valid\n");
+    }
+
+    return 0;
+}
