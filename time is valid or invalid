@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    int hh, mm, ss;
+    scanf("%d:%d:%d", &hh, &mm, &ss);
+    (hh >= 0 && hh < 24 && mm >= 0 && mm < 60 && ss >= 0 && ss < 60) 
+        ? printf("Valid\n") 
+        : printf("Not Valid\n");
+
+
+    return 0;
+}
